@@ -4,7 +4,7 @@ import math, random
 import os 
 from flask import Flask,render_template, request, redirect, url_for,jsonify,session
 PORT = int(os.environ.get('PORT', 33507))
-HOST = 'flask-app-2day.herokuapp.com'
+HOST = 'https://otp--flask-api.herokuapp.com'
 #--------------------------------------------------------------------------------------------------------------
 sender_email='qliodev@gmail.com'         
 password='famousguy'
