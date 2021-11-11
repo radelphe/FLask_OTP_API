@@ -1,7 +1,10 @@
 import smtplib
 import math, random
-from flask_cors import CORS
+# from Flask_Cors import CORS
+import os 
 from flask import Flask,render_template, request, redirect, url_for,jsonify,session
+PORT = int(os.environ.get('PORT', 33507))
+HOST = 'flask-app-2day.herokuapp.com'
 #--------------------------------------------------------------------------------------------------------------
 sender_email='qliodev@gmail.com'         
 password='famousguy'
@@ -24,7 +27,7 @@ def mail(email,OTP):
 	s.quit()
 
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
 @app.route('/OTP', methods =["GET", "POST"])
 def home():
     email_=request.args.get('id')
@@ -34,4 +37,4 @@ def home():
     
     
 if __name__ == '__main__' :
-        app.run(debug=True)
+        app.run(debug=False,host = HOST, port = PORT)
