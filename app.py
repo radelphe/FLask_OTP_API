@@ -1,6 +1,6 @@
 import smtplib
 import math, random
-# from Flask_Cors import CORS
+from flask_cors import CORS
 import os 
 from flask import Flask,render_template, request, redirect, url_for,jsonify,session
 PORT = int(os.environ.get('PORT', 33507))
@@ -27,7 +27,7 @@ def mail(email,OTP):
 	s.quit()
 
 app = Flask(__name__)
-# CORS(app)
+CORS(app)
 @app.route('/OTP', methods =["GET", "POST"])
 def home():
     email_=request.args.get('id')
