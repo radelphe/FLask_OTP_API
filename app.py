@@ -28,7 +28,7 @@ def mail(email, OTP):
     s = smtplib.SMTP('smtp.gmail.com', 587)
     s.starttls()
     s.login(sender_email, password)
-    s.sendmail(sender_email, email, str('Use the code: '+ str(OTP) + ' for logging into Queuelio') )
+    s.sendmail(sender_email, email,str(OTP) )
     s.quit()
 
 
