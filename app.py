@@ -58,7 +58,7 @@ def home():
     mail(email_, OTP_)
     return jsonify(OTP=OTP_, email=email_)
 
-@app.route('/request', methods=['POST'])
+@app.route('/request', methods=['GET', 'POST'])
 def send():
     res = request.args.get('res')
     sender = request.args.get('sender')
