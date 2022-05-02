@@ -5,10 +5,10 @@ import os
 from flask import Flask, render_template, request, redirect, url_for, jsonify, session
 from flask_cors import CORS
 
-PORT = int(os.environ.get('PORT', 33507))
-HOST = 'https://otp--flask-api.herokuapp.com'
-# HOST = '127.0.0.1'
-# PORT = 8000
+# PORT = int(os.environ.get('PORT', 33507))
+# HOST = 'https://otp--flask-api.herokuapp.com'
+HOST = '192.168.1.85'
+PORT = 8000
 # --------------------------------------------------------------------------------------------------------------
 sender_email = 'qliodev@gmail.com'
 password = 'famousguy'
